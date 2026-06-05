@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: hiring-agent
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "uvicorn api:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DEVELOPMENT_MODE
+        value: "false"
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: DEFAULT_MODEL
+        value: gemini-2.0-flash

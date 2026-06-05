@@ -1,6 +1,2 @@
-"""
-Configuration settings for the hiring agent application.
-"""
-
-# Global development mode flag
-DEVELOPMENT_MODE = True
+import os
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False").lower() == "true"
