@@ -67,7 +67,7 @@ def health():
 async def evaluate_resume(
     pdf: UploadFile = File(...),
     gemini_api_key: str = Form(...),
-    model: str = Form("gemini-2.0-flash"),
+    model: str = Form("gemini-1.5-flash"),
 ):
     if not pdf.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files supported.")

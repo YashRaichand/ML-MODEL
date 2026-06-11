@@ -46,7 +46,7 @@ function Badge({ value }) {
 
 export default function App() {
   const [apiKey, setApiKey] = useState("");
-  const [model, setModel] = useState("gemini-2.0-flash");
+  const [model, setModel] = useState("gemini-1.5-flash");
   const [file, setFile] = useState(null);
   const [dragging, setDragging] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -149,9 +149,9 @@ export default function App() {
               <label style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: C.muted, marginBottom: 7, display: "block" }}>Model</label>
               <select value={model} onChange={e => setModel(e.target.value)}
                 style={{ ...inputStyle, width: "auto", padding: "10px 12px" }}>
+                <option value="gemini-1.5-flash">gemini-1.5-flash</option>
                 <option value="gemini-2.0-flash">gemini-2.0-flash</option>
                 <option value="gemini-2.5-flash">gemini-2.5-flash</option>
-                <option value="gemini-2.5-pro">gemini-2.5-pro</option>
               </select>
             </div>
           </div>
